@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YourName | Arduino & Research Freelancer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>YourName</h1>
+    <p>Arduino Developer | Research Consultant | Multimedia Specialist</p>
+    <button id="theme-toggle">🌓</button>
+  </header>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>My Services</h2>
+    <div class="service-grid">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <h3>Arduino Project Development</h3>
+        <p>Custom IoT, robotics, and sensor-based solutions.</p>
+        <span class="price">$50-$200/hour</span>
+        <button class="cta">Contact Me</button>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <h3>Academic Research Assistance</h3>
+        <p>Paper editing, data analysis, and prototyping.</p>
+        <span class="price">$30-$150/hour</span>
+        <button class="cta">Contact Me</button>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <h3>Multimedia Services</h3>
+        <p>Video editing, technical diagrams, and presentations.</p>
+        <span class="price">$25-$100/hour</span>
+        <button class="cta">Contact Me</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <form action="https://formsubmit.co/your-email@example.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Describe your project..." required></textarea>
+      <button type="submit">Send Request</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+/* Base Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #f4f4f4;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background: #0077b6;
+  color: white;
+}
+
+/* Services Grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.service-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .service-card {
+  background: #1e1e1e;
+}
+
+.price {
+  font-weight: bold;
+  color: #0077b6;
+}
+
+.cta {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Contact Form */
+form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+/* Base Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #f4f4f4;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background: #0077b6;
+  color: white;
+}
+
+/* Services Grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.service-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .service-card {
+  background: #1e1e1e;
+}
+
+.price {
+  font-weight: bold;
+  color: #0077b6;
+}
+
+.cta {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Contact Form */
+form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+// Dark/Light Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
+
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
